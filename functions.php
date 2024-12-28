@@ -1,5 +1,6 @@
 <?php
 
+//------------- Load JS & Styles Files -----------------//
 function university_files() {
   //--- JavaScript
   wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
@@ -13,3 +14,10 @@ function university_files() {
 }
 
 add_action('wp_enqueue_scripts', 'university_files');
+
+//--------- Dynamic Title --------------- //
+function university_features() {
+  add_theme_support("title-tag");
+}
+
+add_action("after_setup_theme", 'university_features');
