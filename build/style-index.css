@@ -397,7 +397,8 @@ li {
 body.login .button-primary {
   background-color: #f95738;
   border-color: #f83e1a;
-  text-shadow: 0 -1px 1px #f8320c, 1px 0 1px #f8320c, 0 1px 1px #f8320c, -1px 0 1px #f8320c;
+  text-shadow: 0 -1px 1px #f8320c, 1px 0 1px #f8320c, 0 1px 1px #f8320c,
+    -1px 0 1px #f8320c;
   box-shadow: 0 1px 0 #ed2c07;
 }
 body.login .button-primary:active,
@@ -405,7 +406,8 @@ body.login .button-primary:focus,
 body.login .button-primary:hover {
   background-color: #f8411d;
   border-color: #f95738;
-  text-shadow: 0 -1px 1px #ed2c07, 1px 0 1px #ed2c07, 0 1px 1px #ed2c07, -1px 0 1px #ed2c07;
+  text-shadow: 0 -1px 1px #ed2c07, 1px 0 1px #ed2c07, 0 1px 1px #ed2c07,
+    -1px 0 1px #ed2c07;
   box-shadow: 0 1px 0 #de2907;
 }
 body.login {
@@ -672,7 +674,8 @@ body.login {
   padding-top: 58px;
   opacity: 0;
   transform: translateY(-20%);
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out,
+    transform 0.3s ease-out;
   padding-bottom: 20px;
 }
 .site-header__menu--active {
@@ -1494,4 +1497,92 @@ body.admin-bar .search-overlay {
 .post-item:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
+}
+
+/* New CSS for Posts */
+.custom-posts-container {
+  max-width: 800px;
+
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filter-form {
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-form select,
+.filter-form button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.post-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.post-card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.post-card h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-card h2 a:hover {
+  color: #0073aa;
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.post-excerpt {
+  font-size: 14px;
+  color: #555;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  color: #0073aa;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #0073aa;
+  color: #fff;
 }
