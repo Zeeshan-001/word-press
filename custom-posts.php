@@ -5,6 +5,8 @@ get_header();
 $search_query = isset($_GET['search']) ? sanitize_text_field($_GET['search']) : '';
 $sort_order = isset($_GET['sort']) ? sanitize_text_field($_GET['sort']) : 'desc'; 
 
+// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 // Query args
 $args = array(
     'paged' => get_query_var('paged', 1),
@@ -56,4 +58,4 @@ $custom_query = new WP_Query($args);
     <?php wp_reset_postdata();  ?>
 </div>
 
-<?php get_footer(); // Include the footer ?>
+<?php get_footer();  ?>
