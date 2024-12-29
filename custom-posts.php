@@ -5,11 +5,11 @@ get_header();
 $search_query = isset($_GET['search']) ? sanitize_text_field($_GET['search']) : '';
 $sort_order = isset($_GET['sort']) ? sanitize_text_field($_GET['sort']) : 'desc'; 
 
-// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$search_query ? $paged = isset($_GET['paged']) ? (int) $_GET['paged'] : 1 : $paged = get_query_var('paged', 1); 
 
 // Query args
 $args = array(
-    'paged' => get_query_var('paged', 1),
+    'paged' => $paged,
     'post_type' => 'post',
     'posts_per_page' => 2,
     's' => $search_query,
@@ -28,7 +28,7 @@ $custom_query = new WP_Query($args);
             <option value="desc" <?php selected($sort_order, 'desc'); ?>>Neueste zuerst</option>
             <option value="asc" <?php selected($sort_order, 'asc'); ?>>Älteste zuerst</option>
         </select>
-        <button type="submit">Bestätigen </button>
+        <button type="submit">  Bestätigen </button>
     </form>
 
     <!-- Posts Loop -->
